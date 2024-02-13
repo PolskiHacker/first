@@ -5,4 +5,3 @@ while k < 1000:
 if k == 1000:
     print("mommy")
 print("but not you")
-;;;
