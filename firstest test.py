@@ -4,4 +4,4 @@ while k < 1000:
     k += 1
 if k == 1000:
     print("mommy")
-print("but not you")
+print("but not you")/
