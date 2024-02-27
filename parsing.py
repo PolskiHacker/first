@@ -13,7 +13,6 @@ browser = webdriver.Chrome(service=s)
 # span = soup.find('a', class_='styles_mainTitle__IFQyZ styles_activeMovieTittle__kJdJj').get('hfa')
 # span_2=soup.find('span', class_='desktop-list-main-info_secondaryText__M_aus').text
 # finding = soup.find_all('span', class_='styles_mainTitle__IFQyZ styles_activeMovieTittle__kJdJj')
-# print(div)
 # print(span)
 # print(span_2)
 # print(finding[0].text)

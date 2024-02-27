@@ -19,7 +19,6 @@ def insert(par):
     cursor.execute(inserting)
     con.commit()
 
-
 if __name__=="__main__":
     con = psycopg2.connect(dbname='test', user='postgres', password='Q1w2e3r4', host='localhost')
     cursor = con.cursor()
