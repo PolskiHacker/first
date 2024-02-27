@@ -14,7 +14,7 @@ browser = webdriver.Chrome(service=s)
 # span_2=soup.find('span', class_='desktop-list-main-info_secondaryText__M_aus').text
 # finding = soup.find_all('span', class_='styles_mainTitle__IFQyZ styles_activeMovieTittle__kJdJj')
 # print(span)
-# print(span_2)
+# print(span_2),lp,
 # print(finding[0].text)
 a = "https://www.kinopoisk.ru/lists/movies/top250/?utm_referrer=www.kinopoisk.ru&page="
 data = []
