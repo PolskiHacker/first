@@ -18,8 +18,10 @@ def start(m, res=False):
         markup=types.ReplyKeyboardMarkup(resize_keyboard=True)
         item1=types.KeyboardButton("Факт")
         item2=types.KeyboardButton("Поговорка")
+        item3=types.KeyboardButton("Фото")
         markup.add(item1)
         markup.add(item2)
+        markup.add(item3)
         bot.send_message(m.chat.id, 'Нажми: \nФакт'
         ' для получения интересного факта\nПоговорка '
         '— для получения мудрой цитаты ',  reply_markup=markup)
@@ -28,11 +30,12 @@ def start(m, res=False):
 def handle_text(message):
     # Если юзер прислал 1, выдаем ему случайный факт
     if message.text.strip() == 'Факт' :
-            answer = random.choice(facts)
+            bot.send_message(message.chat.id, random.choice(facts))
     # Если юзер прислал 2, выдаем умную мысль
     elif message.text.strip() == 'Поговорка':
-            answer = random.choice(thinks)
+            bot.send_message(message.chat.id, random.choice(thinks))
+    elif message.text.strip() == 'Фото':
+            bot.send_photo(message.chat.id, 'https://www.thevoicemag.ru/upload/img_cache/f0e/f0e1c3b4b532fbc70a73e022ffcf35f2_fitted_1332x0.jpg', caption= 'это важно')
     # Отсылаем юзеру сообщение в его чат
-    bot.send_message(message.chat.id, answer)
-# Запускаем бота
+    # Запускаем бота
 bot.polling(none_stop=True, interval=0)
